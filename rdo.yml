@@ -129,7 +129,6 @@ packages:
   conf: core
   maintainers:
   - zbitter@redhat.com
-  - jpeeler@redhat.com
   - ryansb@redhat.com
 - project: cinder
   conf: core
@@ -190,7 +189,7 @@ packages:
   conf: core
   source-branch: master
   maintainers:
-  - jpeeler@redhat.com
+  - ryansb@redhat.com
 - project: os-apply-config
   name: os-apply-config
   conf: core
