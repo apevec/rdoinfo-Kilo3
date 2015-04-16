@@ -75,6 +75,7 @@ package-configs:
   client:
     name: python-%(project)s
     upstream: https://git.openstack.org/openstack/python-%(project)s
+    source-branch: stable/kilo
     distgit: ssh://pkgs.fedoraproject.org/python-%(project)s.git
     patches: https://github.com/redhat-openstack/python-%(project)s.git
     master-distgit: https://github.com/openstack-packages/python-%(project)s.git
