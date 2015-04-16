@@ -116,7 +116,6 @@ packages:
   - hguemar@redhat.com
 - project: swift
   conf: core
-  source-branch: master
   maintainers:
   - zaitcev@redhat.com
 - project: ceilometer
