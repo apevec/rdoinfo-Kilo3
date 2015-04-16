@@ -68,7 +68,7 @@ package-configs:
   core:
     name: openstack-%(project)s
     upstream: https://git.openstack.org/openstack/%(project)s
-    source-branch: proposed/kilo
+    source-branch: stable/kilo
     distgit: ssh://pkgs.fedoraproject.org/openstack-%(project)s.git
     patches: https://github.com/redhat-openstack/%(project)s.git
     master-distgit: https://github.com/openstack-packages/%(project)s.git
