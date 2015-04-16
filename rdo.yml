@@ -179,54 +179,6 @@ packages:
   master-distgit: https://github.com/openstack-packages/%(name)s.git
   maintainers:
   - mrunge@redhat.com
-- project: diskimage-builder
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: dib-utils
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: tripleo
-  conf: core
-  source-branch: master
-  upstream: https://git.openstack.org/openstack/tripleo-incubator
-  maintainers:
-  - jruzicka@redhat.com
-- project: tripleo-heat-templates
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: tripleo-image-elements
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: tuskar
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: tuskar-ui
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: instack
-  conf: core
-  source-branch: master
-  upstream: https://github.com/rdo-management/instack.git
-  maintainers:
-  - jslagle@redhat.com
-- project: instack-undercloud
-  conf: core
-  source-branch: master
-  upstream: https://github.com/rdo-management/instack-undercloud.git
-  maintainers:
-  - jslagle@redhat.com
 - project: heat-templates
   conf: core
   source-branch: master
@@ -274,8 +226,6 @@ packages:
 - project: ceilometerclient
   conf: client
 - project: heatclient
-  conf: client
-- project: tuskarclient
   conf: client
 - project: cinderclient
   conf: client
@@ -464,8 +414,3 @@ packages:
   distro-branch: rpm-master
   maintainers:
   - ihrachys@redhat.com
-- project: tripleo-puppet-elements
-  conf: core
-  source-branch: master
-  maintainers:
-  - jslagle@redhat.com
