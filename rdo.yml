@@ -332,12 +332,6 @@ packages:
   master-distgit: https://github.com/openstack-packages/python-osprofiler.git
   maintainers:
   - apevec@redhat.com
-- name: python-netifaces
-  project: netifaces
-  upstream: hg::https://bitbucket.org/al45tair/netifaces
-  master-distgit: https://github.com/openstack-packages/python-netifaces.git
-  maintainers:
-  - apevec@redhat.com
 - name: python-pysaml2
   project: pysaml2
   upstream: https://github.com/rohe/pysaml2.git
