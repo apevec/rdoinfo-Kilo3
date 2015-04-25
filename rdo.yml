@@ -142,6 +142,7 @@ packages:
   - athomas@redhat.com
 - project: neutron
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
