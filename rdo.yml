@@ -131,6 +131,7 @@ packages:
   - eglynn@redhat.com
 - project: heat
   conf: core
+  distro-branch: rpm-master
   maintainers:
   - zbitter@redhat.com
   - ryansb@redhat.com
