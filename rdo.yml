@@ -69,25 +69,28 @@ package-configs:
     name: openstack-%(project)s
     upstream: git://git.openstack.org/openstack/%(project)s
     source-branch: stable/kilo
-    distgit: ssh://pkgs.fedoraproject.org/openstack-%(project)s.git
+    distgit: ssh://pkgs.fedoraproject.org/%(name)s.git
     patches: git://github.com/redhat-openstack/%(project)s
     master-distgit: git://github.com/openstack-packages/%(project)s
+    distro-branch: rpm-master
   client:
     name: python-%(project)s
-    upstream: git://git.openstack.org/openstack/python-%(project)s
+    upstream: git://git.openstack.org/openstack/%(name)s
     source-branch: stable/kilo
-    distgit: ssh://pkgs.fedoraproject.org/python-%(project)s.git
-    patches: git://github.com/redhat-openstack/python-%(project)s
-    master-distgit: git://github.com/openstack-packages/python-%(project)s
+    distgit: ssh://pkgs.fedoraproject.org/%(name)s.git
+    patches: git://github.com/redhat-openstack/%(name)s
+    master-distgit: git://github.com/openstack-packages/%(name)s
+    distro-branch: rpm-master
     maintainers:
     - jruzicka@redhat.com
   lib:
     name: python-%(project)s
     upstream: git://git.openstack.org/openstack/%(project)s
     source-branch: stable/kilo
-    distgit: ssh://pkgs.fedoraproject.org/python-%(project)s.git
+    distgit: ssh://pkgs.fedoraproject.org/%(name)s.git
     patches: git://github.com/redhat-openstack/%(project)s
-    master-distgit: git://github.com/openstack-packages/python-%(project)s
+    master-distgit: git://github.com/openstack-packages/%(name)s
+    distro-branch: rpm-master
     maintainers:
     - apevec@redhat.com
   xstatic:
@@ -98,53 +101,40 @@ packages:
 # core openstack projects
 - project: nova
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - ndipanov@redhat.com
-  - jruzicka@redhat.com
+  - pbrady@redhat.com
 - project: keystone
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - apevec@redhat.com
 - project: glance
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - hguemar@redhat.com
 - project: glance_store
   conf: core
-  source-branch: master
   name: python-glance-store
-  distgit: ssh://pkgs.fedoraproject.org/%(name)s.git
   maintainers:
   - hguemar@redhat.com
 - project: swift
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - zaitcev@redhat.com
 - project: ceilometer
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - eglynn@redhat.com
 - project: heat
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - zbitter@redhat.com
   - ryansb@redhat.com
 - project: cinder
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - eharney@redhat.com
   - apevec@redhat.com
-- project: ironic
-  conf: core
-  maintainers:
-  - athomas@redhat.com
 - project: neutron
   conf: core
   distro-branch: rpm-kilo
@@ -153,16 +143,19 @@ packages:
   - majopela@redhat.com
 - project: neutron-fwaas
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
 - project: neutron-lbaas
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
 - project: neutron-vpnaas
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
@@ -172,59 +165,19 @@ packages:
   - ihrachys@redhat.com
   - majopela@redhat.com
 - project: horizon
-  name: python-django-horizon
   conf: core
-  distgit: ssh://pkgs.fedoraproject.org/python-django-horizon.git
+  name: python-django-horizon
   maintainers:
   - mrunge@redhat.com
 - project: trove
   conf: core
-  distro-branch: rpm-master
   maintainers:
   - hguemar@fedoraproject.org
-- name: python-django-openstack-auth
-  project: django_openstack_auth
-  conf: core
-  source-branch: master
-  upstream: git://git.openstack.org/openstack/django_openstack_auth
-  distgit: ssh://pkgs.fedoraproject.org/%(name)s.git
-  patches: git://github.com/redhat-openstack/%(name)s
-  master-distgit: git://github.com/openstack-packages/%(name)s
+- project: django_openstack_auth
+  conf: lib
+  name: python-django-openstack-auth
   maintainers:
   - mrunge@redhat.com
-- project: heat-templates
-  conf: core
-  source-branch: master
-  maintainers:
-  - ryansb@redhat.com
-- project: os-apply-config
-  name: os-apply-config
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: os-collect-config
-  name: os-collect-config
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: os-net-config
-  name: os-net-config
-  conf: core
-  source-branch: master
-  maintainers:
-  - dprince@redhat.com
-- project: os-refresh-config
-  name: os-refresh-config
-  conf: core
-  source-branch: master
-  maintainers:
-  - jruzicka@redhat.com
-- project: os-cloud-config
-  name: os-cloud-config
-  conf: core
-  source-branch: master
   maintainers:
   - jruzicka@redhat.com
 # The openstack clients
@@ -252,10 +205,9 @@ packages:
   conf: client
 - project: designateclient
   conf: client
-  distro-branch: rpm-master
 - project: keystonemiddleware
   conf: client
-  upstream: git://git.openstack.org/openstack/keystonemiddleware
+  upstream: git://git.openstack.org/openstack/%(project)s
 - project: openstackclient
   conf: client
   distro-branch: rpm-kilo
@@ -268,7 +220,6 @@ packages:
   upstream: git://git.openstack.org/openstack/oslo.i18n
 - project: oslo-messaging
   conf: lib
-  distro-branch: rpm-master
   upstream: git://git.openstack.org/openstack/oslo.messaging
 - project: oslo-config
   conf: lib
@@ -310,51 +261,55 @@ packages:
   conf: lib
 - project: taskflow
   conf: lib
-  distro-branch: rpm-master
 - project: pycadf
   conf: lib
 # deps
-- name: openstack-packstack
-  project: packstack
-  upstream: git://git.openstack.org/stackforge/packstack
-  patches: git://github.com/redhat-openstack/packstack
-  distgit: ssh://pkgs.fedoraproject.org/openstack-packstack
-  master-distgit: git://github.com/openstack-packages/packstack
+- project: packstack
+  name: openstack-%(project)s
+  upstream: git://git.openstack.org/stackforge/%(project)s
+  patches: git://github.com/redhat-openstack/%(project)s
+  distgit: ssh://pkgs.fedoraproject.org/%(name)s
+  master-distgit: git://github.com/openstack-packages/%(project)s
+  distro-branch: rpm-master
   maintainers:
   - mmagr@redhat.com
   - lbezdick@redhat.com
-- name: openstack-puppet-modules
-  project: openstack-puppet-modules
+- project: openstack-puppet-modules
+  name: openstack-puppet-modules
   upstream: git://github.com/redhat-openstack/%(name)s
   source-branch: master-patches
   master-distgit: git://github.com/openstack-packages/%(name)s
+  distro-branch: rpm-master
   maintainers:
   - apevec@gmail.com
   - gchamoul@redhat.com
   - jpena@redhat.com
-- name: python-osprofiler
-  project: osprofiler
+- project: osprofiler
+  name: python-%(project)s
   upstream: git://git.openstack.org/stackforge/%(project)s
   master-distgit: git://github.com/openstack-packages/%(name)s
+  distro-branch: rpm-master
   maintainers:
   - apevec@redhat.com
-- name: python-pysaml2
-  project: pysaml2
+- project: pysaml2
+  name: python-%(project)s
   upstream: git://github.com/rohe/pysaml2
   master-distgit: git://github.com/openstack-packages/python-pysaml2
+  distro-branch: rpm-master
   maintainers:
   - apevec@redhat.com
-- name: python-networking-arista
-  project: networking-arista
-  upstream: git://git.openstack.org/stackforge/networking-arista
-  master-distgit: git://github.com/openstack-packages/python-networking-arista
+- project: networking-arista
+  name: python-%(project)s
+  upstream: git://git.openstack.org/stackforge/%(project)s
+  master-distgit: git://github.com/openstack-packages/%(name)s
+  distro-branch: rpm-master
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
-- name: python-networking-odl
-  project: networking-odl
-  upstream: git://git.openstack.org/stackforge/networking-odl
-  master-distgit: git://github.com/openstack-packages/python-networking-odl
+- project: networking-odl
+  name: python-%(project)s
+  upstream: git://git.openstack.org/stackforge/%(project)s
+  master-distgit: git://github.com/openstack-packages/%(name)s
   distro-branch: rpm-master
   maintainers:
   - ihrachys@redhat.com
