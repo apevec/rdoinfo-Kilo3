@@ -132,6 +132,7 @@ packages:
   - ryansb@redhat.com
 - project: cinder
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - eharney@redhat.com
   - apevec@redhat.com
