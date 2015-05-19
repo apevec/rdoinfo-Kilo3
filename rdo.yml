@@ -231,6 +231,7 @@ packages:
   upstream: git://git.openstack.org/openstack/oslo.concurrency
 - project: oslo-rootwrap
   conf: lib
+  distro-branch: rpm-kilo
   upstream: git://git.openstack.org/openstack/oslo.rootwrap
 - project: oslo-serialization
   conf: lib
