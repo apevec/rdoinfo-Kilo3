@@ -106,6 +106,7 @@ packages:
   - pbrady@redhat.com
 - project: keystone
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - apevec@redhat.com
 - project: glance
