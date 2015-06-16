@@ -111,6 +111,7 @@ packages:
   - apevec@redhat.com
 - project: glance
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - hguemar@redhat.com
 - project: glance_store
@@ -229,6 +230,7 @@ packages:
   upstream: git://git.openstack.org/openstack/oslo.config
 - project: oslo-concurrency
   conf: lib
+  distro-branch: rpm-kilo
   upstream: git://git.openstack.org/openstack/oslo.concurrency
 - project: oslo-rootwrap
   conf: lib
