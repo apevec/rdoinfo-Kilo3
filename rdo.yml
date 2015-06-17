@@ -169,6 +169,7 @@ packages:
   - majopela@redhat.com
 - project: horizon
   conf: core
+  distro-branch: rpm-kilo
   name: python-django-horizon
   maintainers:
   - mrunge@redhat.com
@@ -250,6 +251,7 @@ packages:
   upstream: git://git.openstack.org/openstack/oslo.utils
 - project: oslo-vmware
   conf: lib
+  distro-branch: rpm-kilo
   upstream: git://git.openstack.org/openstack/oslo.vmware
 - project: oslo-context
   conf: lib
