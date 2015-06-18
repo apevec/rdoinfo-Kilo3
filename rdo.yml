@@ -179,6 +179,7 @@ packages:
   - hguemar@fedoraproject.org
 - project: django_openstack_auth
   conf: lib
+  distro-branch: rpm-kilo
   name: python-django-openstack-auth
   master-distgit: git://github.com/openstack-packages/%(name)s
   maintainers:
