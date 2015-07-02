@@ -164,6 +164,7 @@ packages:
   - majopela@redhat.com
 - project: designate
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
