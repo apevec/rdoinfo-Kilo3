@@ -255,6 +255,7 @@ packages:
   upstream: git://git.openstack.org/openstack/oslo.db
 - project: oslo-utils
   conf: lib
+  distro-branch: rpm-kilo
   upstream: git://git.openstack.org/openstack/oslo.utils
 - project: oslo-vmware
   conf: lib
