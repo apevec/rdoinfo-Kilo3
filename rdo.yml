@@ -121,6 +121,7 @@ packages:
   - hguemar@redhat.com
 - project: swift
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - zaitcev@redhat.com
 - project: ceilometer
