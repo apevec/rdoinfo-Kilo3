@@ -101,6 +101,7 @@ packages:
 # core openstack projects
 - project: nova
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - ndipanov@redhat.com
   - pbrady@redhat.com
@@ -131,6 +132,7 @@ packages:
   - eglynn@redhat.com
 - project: heat
   conf: core
+  distro-branch: rpm-kilo
   maintainers:
   - zbitter@redhat.com
   - ryansb@redhat.com
@@ -320,7 +322,7 @@ packages:
   name: python-networking-arista
   upstream: git://git.openstack.org/openstack/%(project)s
   master-distgit: git://github.com/openstack-packages/%(name)s
-  distro-branch: rpm-master
+  distro-branch: rpm-kilo
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
