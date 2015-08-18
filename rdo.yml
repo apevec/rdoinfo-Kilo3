@@ -337,3 +337,11 @@ packages:
   maintainers:
   - ihrachys@redhat.com
   - majopela@redhat.com
+- project: vmware-nsx
+  name: python-networking-vmware-nsx
+  upstream: git://git.openstack.org/openstack/%(project)s
+  source-branch: stable/kilo
+  master-distgit: git://github.com/openstack-packages/%(name)s
+  distro-branch: rpm-kilo
+  maintainers:
+  - ihrachys@redhat.com
