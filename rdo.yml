@@ -281,6 +281,7 @@ packages:
   conf: lib
 - project: taskflow
   conf: lib
+  distro-branch: rpm-kilo
 - project: pycadf
   conf: lib
 # deps
