@@ -376,3 +376,4 @@ packages:
 - project: UcsSdk
   conf: lib
   upstream: git://github.com/CiscoUcs/UcsPythonSDK
+  source-branch: master
