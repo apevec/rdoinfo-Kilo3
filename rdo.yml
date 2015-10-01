@@ -215,6 +215,7 @@ packages:
   conf: client
 - project: neutronclient
   conf: client
+  distro-branch: rpm-kilo
 - project: saharaclient
   conf: client
 - project: troveclient
