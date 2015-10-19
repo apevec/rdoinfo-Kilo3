@@ -315,7 +315,7 @@ packages:
   - jpena@redhat.com
 - project: osprofiler
   name: python-osprofiler
-  upstream: git://git.openstack.org/stackforge/%(project)s
+  upstream: git://git.openstack.org/openstack/%(project)s
   master-distgit: git://github.com/openstack-packages/%(name)s
   distro-branch: rpm-master
   maintainers:
@@ -338,7 +338,7 @@ packages:
   - majopela@redhat.com
 - project: networking-mlnx
   name: python-networking-mlnx
-  upstream: git://git.openstack.org/stackforge/%(project)s
+  upstream: git://git.openstack.org/openstack/%(project)s
   source-branch: stable/kilo
   master-distgit: git://github.com/openstack-packages/%(name)s
   distro-branch: rpm-kilo
