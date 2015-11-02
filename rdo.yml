@@ -384,3 +384,11 @@ packages:
   conf: lib
   upstream: git://github.com/CiscoUcs/UcsPythonSDK
   source-branch: master
+- project: group-based-policy
+  name: openstack-neutron-gbp
+  upstream: git://git.openstack.org/openstack/%(project)s
+  source-branch: stable/kilo
+  master-distgit: git://github.com/openstack-packages/%(project)s
+  distro-branch: rpm-kilo
+  maintainers:
+  - kukura@noironetworks.com
