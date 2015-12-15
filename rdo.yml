@@ -301,7 +301,7 @@ packages:
   patches: git://github.com/redhat-openstack/%(project)s
   distgit: ssh://pkgs.fedoraproject.org/%(name)s
   master-distgit: git://github.com/openstack-packages/%(project)s
-  distro-branch: rpm-master
+  distro-branch: rpm-kilo
   maintainers:
   - mmagr@redhat.com
   - lbezdick@redhat.com
