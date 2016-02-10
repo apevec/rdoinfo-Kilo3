@@ -212,6 +212,7 @@ packages:
   conf: client
 - project: cinderclient
   conf: client
+  distro-branch: rpm-kilo
 - project: ironicclient
   conf: client
 - project: neutronclient
@@ -219,6 +220,7 @@ packages:
   distro-branch: rpm-kilo
 - project: saharaclient
   conf: client
+  distro-branch: rpm-kilo
 - project: troveclient
   conf: client
 - project: designateclient
@@ -275,6 +277,7 @@ packages:
   upstream: git://git.openstack.org/openstack/oslo.vmware
 - project: oslo-context
   conf: lib
+  distro-branch: rpm-kilo
   upstream: git://git.openstack.org/openstack/oslo.context
 - project: oslo-log
   conf: lib
@@ -285,6 +288,7 @@ packages:
   upstream: git://git.openstack.org/openstack/oslo.policy
 - project: oslo-versionedobjects
   conf: lib
+  distro-branch: rpm-kilo
   upstream: git://git.openstack.org/openstack/oslo.versionedobjects
 - project: stevedore
   conf: lib
